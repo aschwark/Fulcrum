@@ -1,0 +1,74 @@
+{{> _logout}}
+
+{{#each errors}}
+    <div class="alert">{{text}}</div>
+{{else}}
+{{/each}}
+
+<div class="form-container">
+    <h1>EDIT HM</h1>
+
+    <form action="/members/{{member.id}}?_method=PUT" method="post" class="form-block">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="form-group">
+        <label for="name">Name*</label>
+        <input type="text" class="form-input" name="name" value="{{member.name}}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="position">Position</label>
+        <input type="text" class="form-input" name="position" value="{{member.position}}">
+    </div>
+
+    <div class="form-group">
+        <label for="organization">Organization</label>
+        <input type="text" class="form-input" name="organization" value="{{member.organization}}">
+    </div>
+
+    <div class="form-group">
+        <label for="expertise">Expertise*</label>
+        <textarea class="expertise-block" name="expertise" rows="10" cols="40" required>{{member.expertise}}</textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="connection">Connected To*</label>
+        <input type="text" class="form-input" name="connection" value="{{member.connection}}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="languages">Languages</label>
+        <input type="text" class="form-input" name="languages" value="{{member.languages}}">
+    </div>
+
+    <div class="form-group">
+        <label for="telephone">Telephone</label>
+        <input type="text" class="form-input" name="telephone" value="{{member.telephone}}">
+    </div>
+
+    <div class="form-group">
+        <label for="whatsapp">Have WhatsApp? (Check if Yes)</label>
+        <input type="checkbox" name="whatsapp" value="true">
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-input" name="location" value="{{member.location}}">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-input" name="email" value="{{member.email}}">
+    </div>
+
+    <div class="form-group">
+        <label for="commitment">Commitment Level*</label>
+        <div><input type="checkbox" class="form-input" name="commitment" value="A">A - Will Visit Impresario</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="B">B - Will Skype/Call</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="C">C - Will Email/Text</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="D">D - Will Make Connections</div>
+    </div>
+
+    <button type="submit" class="sub-btn"><span class="subinner-btn">UPDATE</span></button>
+
+    </form>
+</div>

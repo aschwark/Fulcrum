@@ -1,0 +1,26 @@
+<div id="particles-js"></div>
+
+<div class="main-wrapper">
+    <div class="intro">
+        <h2>FULCRUM</h2>
+    </div>
+
+    <form action="/users/login" method="post" class="login-container">
+        <label class="input-name" for="email"><b>Email</b></label>
+        <input class="input" type="email" name="email" required>
+
+        <label class="input-name" for="password"><b>Password</b></label>
+        <input class="input" type="password" name="password" required>
+
+        <button class="login-btn" type="submit"><b>Login</b></button>
+    </form>
+</div>
+
+<script
+    src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+</script>
+<script>
+    particlesJS.load('particles-js', '/particles.json', function(){
+        console.log('particles.json loaded...');
+    });
+</script>

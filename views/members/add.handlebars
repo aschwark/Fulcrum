@@ -1,0 +1,74 @@
+{{> _logout}}
+
+<a href="/members/memList">
+    <div class="add-back-btn"></div>
+</a>
+
+<div class="form-container">
+    <h1>ADD NEW HM</h1>
+    <h5>Please make sure to select a commitment level</h5>
+
+    <form action="/members" method="post" class="form-block">
+
+    <div class="form-group">
+        <label for="name">Name*</label>
+        <input type="text" class="form-input" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="position">Position</label>
+        <input type="text" class="form-input" name="position">
+    </div>
+
+    <div class="form-group">
+        <label for="organization">Organization</label>
+        <input type="text" class="form-input" name="organization">
+    </div>
+
+    <div class="form-group">
+        <label for="expertise">Expertise*</label>
+        <textarea class="expertise-block" name="expertise" rows="10" cols="40" required></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="connection">Connected To*</label>
+        <input type="text" class="form-input" name="connection" required>
+    </div>
+
+    <div class="form-group">
+        <label for="languages">Languages</label>
+        <input type="text" class="form-input" name="languages">
+    </div>
+
+    <div class="form-group">
+        <label for="telephone">Telephone (include country code)</label>
+        <input type="text" class="form-input" name="telephone">
+    </div>
+
+    <div class="form-group">
+        <label for="whatsapp">Have WhatsApp? (Check if Yes)</label>
+        <input type="checkbox" name="whatsapp" value="true">
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-input" name="location">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-input" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="commitment">Commitment Level*</label>
+        <div><input type="checkbox" class="form-input" name="commitment" value="A">A - Will Visit Impresario</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="B">B - Will Skype/Call</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="C">C - Will Email/Text</div>
+        <div><input type="checkbox" class="form-input" name="commitment" value="D">D - Will Make Connections</div>
+    </div>
+
+    <button type="submit" class="sub-btn"><span class="subinner-btn">SUBMIT</span></button>
+
+    </form>
+</div>

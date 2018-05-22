@@ -1,0 +1,33 @@
+<div id="particles-js"></div>
+
+<div class="main-wrapper">
+    <div class="intro">
+        <h1>FULCRUM REGISTRATION</h1>
+    </div>
+
+    <form action="/users/register" method="post" class="login-container">
+
+        <label class="input-name" for="name"><b>Name</b></label>
+        <input class="input" type="text" placeholder="Name" name="name" value="{{name}}" required>
+
+        <label class="input-name" for="email"><b>Email</b></label>
+        <input class="input" type="text" placeholder="Email" name="email" value="{{email}}" required>
+
+        <label class="input-name" for="password"><b>Password</b></label>
+        <input class="input" type="password" placeholder="Password" name="password" value="{{password}}" required>
+
+        <label class="input-name" for="password2"><b>Confirm Password</b></label>
+        <input class="input" type="password" placeholder="Confirm Password" name="password2" value="{{password2}}" required>
+
+        <button class="login-btn" type="submit"><b>REGISTER</b></button>
+    </form>
+</div>
+
+<script
+    src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+</script>
+<script>
+    particlesJS.load('particles-js', '/particles.json', function(){
+        console.log('particles.json loaded...');
+    });
+</script>

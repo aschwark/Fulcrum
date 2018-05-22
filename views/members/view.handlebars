@@ -1,0 +1,68 @@
+<div class="mem-container">
+
+    <div class="mem-name">
+        <h1>{{member.name}}</h1>
+    </div>
+
+    <div class="expertise-info">
+        <h2>EXPERTISE</h2>
+        <p>{{member.expertise}}</p>
+    </div>
+
+    <div class="crit-info">
+        <h2>TELEPHONE: <span class="normal">{{member.telephone}}</span></h2>
+        <h2>EMAIL: <span class="normal">{{member.email}}</span></h2>
+        <h2>CL: <span class="normal">{{member.commitment}}</span></h2>
+    </div>
+
+    <div class="other-info">
+        <h2>POSTITION: <span class="normal">{{member.position}}</span></h2>
+        <h2>ORGANIZATION: <span class="normal">{{member.organization}}</span></h2>
+        <h2>LOCATION: <span class="normal">{{member.location}}</span></h2>
+        <h2>CONNECTED BY: <span class="normal">{{member.connection}}</span></h2>
+        <h2>LANGUAGES: <span class="normal">{{member.languages}}</span></h2>
+    </div>
+
+    <div class="notes">
+        <h2>NOTES:</h2>
+        {{#each member.posts}}
+            <div class="note">
+                <p>{{note}}</p>
+                <form method="post" action="/members/note/{{{../member.id}}}/{{id}}?_method=DELETE">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" class="delete-note" value="">
+                </form>
+            </div>
+        {{else}}
+            <p>No Notes in Database</p>
+        {{/each}}
+    </div>
+</div>
+
+<a href="/members/memList">
+    <div class="back-btn"></div>
+</a>
+
+<form method="post" action="/members/view/{{member.id}}?_method=DELETE">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="delete" value="DELETE HM" Onclick="return ConfirmDelete();">
+</form>
+
+<a href="/members/edit/{{member.id}}">
+    <div class="edit"></div>
+</a>
+
+<a href="/members/addNote/{{member.id}}">
+    <div class="add-note"></div>
+</a>
+
+<script>
+    function ConfirmDelete()
+    {
+      let x = confirm("Delete this HM permanently?");
+      if (x)
+        return true;
+      else
+        return false;
+    }
+</script> 

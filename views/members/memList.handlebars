@@ -1,0 +1,26 @@
+{{> _logout}}
+
+<form action="/members/memList" method="GET" class="container">
+    <label class="input-name" for="search"><b>HM SEARCH</b></label>
+    <input class="input" type="search" placeholder="Keywords, Name, Profession, etc." name="search">
+    {{!-- MIGHT HAVE TO CHANGE BUTTON TO INPUT --}}
+    <button class="login-btn" type="submit"><b>Search</b></button>
+</form>
+
+<div class="mem-grid">
+{{#each members}}
+
+    <a href="/members/view/{{id}}">
+        <div class="member">
+            <h1>{{name}}</h1>
+            <h3>Position: {{position}}</h3>
+            <h3>CL: {{commitment}}</h3>
+        </div>
+    </a>
+
+{{else}}
+    <h3>NO MEMBERS</h3>
+{{/each}}
+</div>
+
+<a href="/members/add"><div class="add"></div></a>

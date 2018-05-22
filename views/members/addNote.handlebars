@@ -1,0 +1,21 @@
+{{> _logout}}
+
+
+<div class="mem-container">
+
+    <div class="note-name">
+        <h1>{{member.name}}</h1>
+    </div>
+
+    <form action="/members/addNote/{{member.id}}?_method=PUT" method="post" class="note-block">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+            <label for="note">NEW NOTE:</label>
+            <textarea class="expertise-block" name="note" rows="10" cols="40"></textarea>
+        </div>
+
+        <button type="submit" class="sub-btn"><span class="subinner-btn">ADD NOTE</span></button>
+    
+    </form>
+
+
