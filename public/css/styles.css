@@ -12,6 +12,7 @@ body {
     position: fixed;
     top: 0;
     right: 20px;
+    z-index: 20;
     font-style: italic;
     text-decoration: none;
     color: black;
@@ -23,6 +24,7 @@ body {
     top: 0;
     font-style: italic;
     left: 20px;
+    z-index: 20;
     text-decoration: none;
     color: black;
     transition: all ease .2s;
@@ -565,5 +567,67 @@ body {
 
     .input {
         width: 80vw;
+    }
+
+    .mem-container h2 {
+        font-size: 1.2rem;
+    }
+    .expertise-info,
+    .notes {
+        margin-left: 10px;
+    }
+
+    .notes {
+        grid-row: 3 / span 2;
+    }
+
+    .expertise-info {
+        grid-row: 2;
+    }
+
+    .other-info {
+        grid-row: 2 / span 3;
+    }
+
+    .crit-info {
+        padding: 0;
+    }
+    .crit-info h2 {
+        margin: 0;
+        padding: 0 10px 0 10px;
+    }
+
+    .mem-name h1 {
+        padding: 15px 0 0 10px;
+    }
+    
+    .delete {
+        bottom: 60px;
+    }
+
+    .edit {
+        bottom: 160px;
+    }
+
+    .add-note {
+        bottom: 110px;
+    }
+
+    .form-container {
+        padding-top: 10%;
+    }
+
+    .form-block {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+
+    .add-back-btn {
+        top: 40px;
     }
 }
