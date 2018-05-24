@@ -15,7 +15,7 @@ body {
     z-index: 20;
     font-style: italic;
     text-decoration: none;
-    color: black;
+    color: #173A9B;
     transition: all ease .2s;
 }
 
@@ -26,13 +26,13 @@ body {
     left: 20px;
     z-index: 20;
     text-decoration: none;
-    color: black;
+    color: #173A9B;
     transition: all ease .2s;
 }
 
 .fulcrum-link:hover,
 .logout:hover {
-    color: #087f8c;
+    color: whitesmoke;
     font-size: 1.1rem;
 }
 
@@ -44,7 +44,8 @@ body {
     padding-bottom: 5px;
     text-transform: uppercase;
     margin: auto;
-    background-color: rgba(216, 9, 9, 0.2)
+    background-color: #E6150A;
+    color: white;
 }
 
 .alert-success {
@@ -53,10 +54,18 @@ body {
     padding-bottom: 5px;
     text-transform: uppercase;
     margin: auto;
-    background-color: rgba(9, 216, 44, 0.514)
+    background-color: #08B21D;
+    color: white;
 }
 
 /* INDEX PAGE */
+.bckgrnd {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(60deg, #E69F0A 0%, #E6720A 100%);
+    position: fixed;
+    z-index: -10;
+}
 
 .index {
     display: inline-flex;
@@ -64,7 +73,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     padding-bottom: 20px;
 }
 
@@ -78,7 +87,13 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100%;
-    background-image: url('../img/squares.png');
+    background-image: linear-gradient(60deg, #E69F0A 0%, #E6720A 100%);
+}
+
+.main-wrapper h3 {
+    color: #173A9B;
+    position: absolute;
+    bottom: 10px;
 }
 
 .intro {
@@ -94,6 +109,7 @@ body {
     margin: 0;
     display: inline-block;
     border-radius: 20px;
+    color: #173A9B;
 }
 
 .login-container {
@@ -109,6 +125,12 @@ body {
     display: inline-block;
     width: 45%;
     padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
 }
 
 .input-name {
@@ -117,6 +139,7 @@ body {
     margin-bottom: 10px;
     display: inline-block;
     width: 100%;
+    color: white;
 }
 
 .input-name b {
@@ -134,6 +157,7 @@ body {
     padding-right: 12px;
     color: black;
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .login-btn:hover,
@@ -141,7 +165,7 @@ body {
 .register:hover {
     cursor: pointer;
     color: white;
-    background-color: #087f8c;
+    background-color: #173A9B;
 }
 
 .login-btn b {
@@ -178,7 +202,6 @@ body {
     align-items: center;
     padding: 5% 0 2% 0;
     width: 100%;
-    background-image: url('/img/squares.png');
 }
 
 .clear {
@@ -231,13 +254,18 @@ body {
     align-items: center;
     padding-top: 5%;
     width: 100%;
-    background-image: url('/img/squares.png');
+    background-image: linear-gradient(60deg, #E69F0A 0%, #E6720A 100%);
+}
+
+.form-container h1 {
+    color: #173A9B;
 }
 
 .form-block {
-    border: 1px black solid;
+    border: 1px white solid;
+    border-radius: 10px;
     padding: 20px 40px 20px 40px;
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(250, 250, 250, 0.3);
     margin-bottom: 20px;
 }
 
@@ -254,19 +282,22 @@ body {
 
 .form-input {
     margin-left: 20px;
-    padding-right: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    border: none;
 }
 
 .expertise-block {
     margin-left: 20px;
+    border-radius: 10px;
 }
 
 .sub-btn {
     align-self: center;
     font-size: 1rem;
-    border: black 1px solid;
+    border: none;
     background: white;
     padding: 10px;
     padding-left: 12px;
@@ -274,6 +305,7 @@ body {
     margin-top: 30px;
     margin-left: 50%;
     transform: translate(-50%, 0);
+    border-radius: 10px;
 }
 
 .subinner-btn {
@@ -292,7 +324,6 @@ body {
     grid-gap: 20px;
     width: 100%;
     height: 100%;
-    background-image: url('/img/squares.png');
 }
 
 .add {
@@ -301,7 +332,7 @@ body {
     right: 10px;
     width: 40px;
     height: 40px;
-    border: black solid 1px;
+    border: white solid 1px;
     border-radius: 50%;
     background: url('/img/add.png'); 
     background-size: 30px 30px;
@@ -314,14 +345,15 @@ body {
 .member {
     position: relative;
     display: grid;
-    grid-template-rows: 130px 60px 60px;
+    grid-template-rows: 110px 55px 55px;
     justify-items: center;
     align-items: center;
     border: 1px solid black;
     text-decoration: none;
-    background: white;
+    background: whitesmoke;
     color: black;
-    height: 250px;
+    height: 230px;
+    border-radius: 10px;
 }
 
 .mem-grid a {
@@ -333,12 +365,12 @@ body {
     margin: 0;
     padding: 0 10px 0 10px;
     text-align: center;
-    color: #087f8c;
+    color: #173A9B;
     text-transform: uppercase;
 }
 
 .member:hover {
-    border-color: #087f8c;
+    border-color: #173A9B;
     border-width: 2px;
 }
 
@@ -363,7 +395,7 @@ body {
 /* MEMBER INSTANCE PAGE */
 
 .mem-container {
-    background: url('/img/squares.png');
+    background-image: linear-gradient(60deg, #E69F0A 0%, #E6720A 100%);
     height: 100%;
     display: grid;
     grid-gap: 10px;
@@ -379,11 +411,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    
+    color: #173A9B;
 }
 
 .mem-name h1 {
     text-transform: uppercase;
+    font-size: 2.75rem;
     letter-spacing: 4px;
     margin: 0;
     padding: 20px 0 0 60px;
@@ -392,7 +425,7 @@ body {
 .crit-info {
     padding: 0px 20px 0px 20px;
     border-top:black solid 2px;
-    background-color: rgba(21, 143, 173, 0.445);
+    background-color: rgb(21, 143, 173);
     grid-column: 1 / span 4;
     grid-row: 6;
     display: flex;
@@ -419,7 +452,7 @@ body {
     right: 10px;
     width: 40px;
     height: 40px;
-    border: black solid 1px;
+    border: white solid 1px;
     border-radius: 50%;
     background: url('/img/add.png'); 
     background-size: 30px 30px;
@@ -434,14 +467,15 @@ body {
     bottom: 95px;
     right: 10px;
     height: 40px;
-    border: black solid 1px;
+    border: white solid 2px;
     background-color: white;
     transition: 0.1s all ease;
+    border-radius: 10px;
 }
 
 .delete:hover {
-    border-color: firebrick;
-    background-color: firebrick;
+    border-color: #E6150A;
+    color: #E6150A
 }
 
 .edit {
@@ -451,7 +485,7 @@ body {
     right: 10px;
     width: 40px;
     height: 40px;
-    border: black solid 1px;
+    border: white solid 1px;
     border-radius: 50%;
     background: url('/img/edit.png'); 
     background-repeat: no-repeat;
@@ -525,7 +559,7 @@ body {
 .add-note:hover,
 .add:hover,
 .edit:hover {
-    border-color: #087f8c;
+    border-color: #173A9B;
     border-width: 3px;
 }
 
@@ -537,15 +571,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #173A9B;
+    text-transform: uppercase;
 }
 
 .note-block {
     grid-column: 2 / span 2;
     grid-row: 3;
-    border: 1px black solid;
+    border: 1px white solid;
+    border-radius: 10px;
     padding: 20px 40px 20px 40px;
     background-color: rgba(200, 200, 200, 0.2);
     margin-bottom: 20px;
+    color: white;
 }
 
 /* MEDIA QUERIES */
@@ -599,6 +637,7 @@ body {
 
     .mem-name h1 {
         padding: 15px 0 0 10px;
+        font-size: 2rem;
     }
     
     .delete {
