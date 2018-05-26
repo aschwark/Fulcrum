@@ -7,6 +7,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 const app = express();
 
@@ -26,7 +27,21 @@ mongoose.connect(db.mongoURI)
     .catch(err => console.log(err));
 
 // Handlebars Middleware
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+let hbs = exphbs.create({
+    // Specify helpers which are only registered on this instance.
+    helpers: {
+        formatDate: function (date, format) {
+            return moment(date).format(format);
+        }
+    }
+});
+
+app.engine('handlebars', exphbs({defaultLayout: 'main',         helpers: {
+        formatDate: function (date, format) {
+            return moment(date).format(format);
+        }
+        }
+}));
 app.set('view engine', 'handlebars');
 
 // Body Parser Middleware

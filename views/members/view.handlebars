@@ -6,13 +6,13 @@
 
     <div class="expertise-info">
         <h2>EXPERTISE:</h2>
-        <p>{{member.expertise}}</p>
+        <p class="normal">{{member.expertise}}</p>
     </div>
 
     <div class="crit-info">
-        <h2>TELEPHONE: <span class="normal">{{member.telephone}}</span></h2>
-        <h2>EMAIL: <span class="normal">{{member.email}}</span></h2>
-        <h2>CL: <span class="normal">{{member.commitment}}</span></h2>
+        <h2>TELEPHONE: {{member.telephone}}</h2>
+        <h2>EMAIL: {{member.email}}</h2>
+        <h2>CL: {{member.commitment}}</h2>
     </div>
 
     <div class="other-info">
@@ -27,33 +27,39 @@
         <h2>NOTES:</h2>
         {{#each member.posts}}
             <div class="note">
-                <p>{{note}}</p>
-                <form method="post" action="/members/note/{{{../member.id}}}/{{id}}?_method=DELETE">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="submit" class="delete-note" value="">
-                </form>
+                <div>
+                    <form style="display: inline-block;" method="post" action="/members/note/{{{../member.id}}}/{{id}}?_method=DELETE">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="delete-note" name="delete">
+                            <i class="fas fa-minus-circle"></i>
+                        </button>
+                    </form>
+                    {{formatDate note.date "MMMM Do YYYY"}}:
+                </div>
+                <p class="normal">{{note}}</p>
+                
             </div>
         {{else}}
-            <p>No Notes in Database</p>
+            <p class="normal" style="margin: 0;">No Notes in Database</p>
         {{/each}}
     </div>
 </div>
 
-<a href="/members/memList">
-    <div class="back-btn"></div>
+<a class="back-btn" href="/members/memList">
+    <i class="fas fa-arrow-left"></i>
 </a>
 
 <form method="post" action="/members/view/{{member.id}}?_method=DELETE">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" class="delete" value="DELETE HM" Onclick="return ConfirmDelete();">
+    <button type="submit" class="delete" Onclick="return ConfirmDelete();"><i class="fas fa-user-slash"></i></button>
 </form>
 
-<a href="/members/edit/{{member.id}}">
-    <div class="edit"></div>
+<a class="edit" href="/members/edit/{{member.id}}">
+    <i class="fas fa-pencil-alt"></i>
 </a>
 
-<a href="/members/addNote/{{member.id}}">
-    <div class="add-note"></div>
+<a class="add-note" href="/members/addNote/{{member.id}}">
+    <i class="fas fa-plus"></i>
 </a>
 
 <script>

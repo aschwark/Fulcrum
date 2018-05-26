@@ -1,11 +1,10 @@
 {{> _logout}}
 
 <div class="bckgrnd"></div>
-<form action="/members/memList" method="GET" class="container">
-    <label class="input-name" for="search"><b>HM SEARCH</b></label>
+<form action="/members/memList" method="GET" class="container scroll-up">
+    <label class="search-name" for="search"><b>SEARCH:</b></label>
     <input class="input" type="search" placeholder="Keywords, Name, Profession, etc." name="search">
-    {{!-- MIGHT HAVE TO CHANGE BUTTON TO INPUT --}}
-    <button class="login-btn" type="submit"><b>Search</b></button>
+    <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
 </form>
 
 <div class="mem-grid">
@@ -24,4 +23,24 @@
 {{/each}}
 </div>
 
-<a href="/members/add"><div class="add"></div></a>
+<a class="add" href="/members/add"><i class="fas fa-user-plus"></i></a>
+
+<script>
+    const container = document.querySelector('.container');
+
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function(){
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop){
+            // downscoll code
+            if(container.classList.contains('scroll-up')) {container.classList.remove('scroll-up')}
+            if (!container.classList.contains('scroll-down')) {container.classList.add('scroll-down')}
+        } else {
+            // upscroll code
+            if(container.classList.contains('scroll-down')) {container.classList.remove('scroll-down')}
+            if(!container.classList.contains('scroll-up')) {container.classList.add('scroll-up')}  
+        }
+        lastScrollTop = st;
+    }, false);
+
+</script>

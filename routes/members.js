@@ -185,7 +185,7 @@ let errors = [];
         new Member(newUser)
         .save()
         .then(member => {
-            req.flash('success_msg', 'HM Added');
+            req.flash('success_msg', 'Hub Member Added');
             res.redirect('/members/memList');
         });
     };
