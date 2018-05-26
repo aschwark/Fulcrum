@@ -64,7 +64,7 @@ body {
 .bckgrnd {
     height: 100vh;
     width: 100vw;
-    background-color: #111315;
+    background-image: linear-gradient(45deg, #E6720A, #08818C);
     position: fixed;
     z-index: -10;
 }
@@ -209,14 +209,14 @@ body {
 
 .container {
     position: fixed;
-    right: 10%;
+    right: 16%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 70%;
     z-index: 10;
-    background: rgba(17, 19, 21, 0.9);
+    background: rgba(17, 19, 21, 0.6);
 }
 
 .scroll-up {
