@@ -80,7 +80,10 @@ body {
 }
 
 .intro2 {
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-wrapper {
@@ -109,6 +112,7 @@ body {
     font-weight: 700;
     letter-spacing: 1rem;
     margin: 0;
+    margin-bottom: 30px;
     display: inline-block;
     border-radius: 20px;
     color: #E6720A;
@@ -216,7 +220,7 @@ body {
     align-items: center;
     width: 70%;
     z-index: 10;
-    background: rgba(17, 19, 21, 0.6);
+    background: rgba(17, 19, 21, 0.8);
 }
 
 .scroll-up {
@@ -313,10 +317,10 @@ body {
     grid-template-rows: 110px 55px 55px;
     justify-items: center;
     align-items: center;
-    border: 3px solid whitesmoke;
+    border: 3px solid #08818C;
     text-decoration: none;
-    background: whitesmoke;
-    color: black;
+    background: rgba(17, 19, 21, 0.8);
+    color: white;
     height: 230px;
     border-radius: 10px;
 }
@@ -334,7 +338,7 @@ body {
     margin: 0;
     padding: 0 10px 0 10px;
     text-align: center;
-    color: #08818C;
+    color: #E6720A;
     text-transform: uppercase;
 }
 
