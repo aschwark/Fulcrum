@@ -20,7 +20,8 @@ router.get('/memList', ensureAuthenticated, (req, res) => {
             {organization: regex},
             {connection: regex},
             {languages: regex},
-            {location: regex}
+            {location: regex},
+            {expertise: regex}
         ]})
             .sort({name:'asc'})
                 .then(members => {
